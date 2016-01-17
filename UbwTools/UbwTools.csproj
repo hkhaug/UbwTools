@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1015B05-C49D-4E29-A1A7-BC4F07B1A62B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UbwTools</RootNamespace>
+    <AssemblyName>UbwTools</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Kastes\UbwTools\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>nb-NO</TargetCulture>
+    <ProductName>Unit4 Business World Tools</ProductName>
+    <PublisherName>Hans Kristian Haug</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.30.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Unit4.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C6B3C073A44EAF6A6625D9F3865F14511E54AEB9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>UbwTools_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NinEngine, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\nor-id-num.1.0.3\Lib\NinEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.8.1.33936, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.8.1\lib\net20\ObjectListView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.022\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PoorMansTSqlFormatterLib35">
+      <HintPath>.\PoorMansTSqlFormatterLib35.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BFlagCalc\BflagAdvancedGuiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BFlagCalc\BflagAdvancedGuiForm.Designer.cs">
+      <DependentUpon>BflagAdvancedGuiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BFlagCalc\BflagSimpleGuiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BFlagCalc\BflagSimpleGuiForm.Designer.cs">
+      <DependentUpon>BflagSimpleGuiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Global.cs" />
+    <Compile Include="Common\Gui\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Gui\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Gui\DeveloperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Gui\DeveloperForm.Designer.cs">
+      <DependentUpon>DeveloperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Gui\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Gui\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Gui\WaitingCursor.cs" />
+    <Compile Include="Common\Gui\IconSucker.cs" />
+    <Compile Include="Common\LaunchManager.cs" />
+    <Compile Include="Common\ShortcutMaker.cs" />
+    <Compile Include="Common\Storage\IRepBinary.cs" />
+    <Compile Include="Common\Storage\RepApp.cs" />
+    <Compile Include="Common\Storage\RepBase.cs" />
+    <Compile Include="Common\Storage\RepBinary.cs" />
+    <Compile Include="Common\Storage\RepCommon.cs" />
+    <Compile Include="Common\Storage\RepLaunch.cs" />
+    <Compile Include="Common\Storage\RepLaunchDatabases.cs" />
+    <Compile Include="Common\Storage\RepLaunchExternals.cs" />
+    <Compile Include="Common\Storage\Repository.cs" />
+    <Compile Include="Common\Storage\RepSql.cs" />
+    <Compile Include="Common\Storage\RepSqlConnections.cs" />
+    <Compile Include="Common\Storage\RepSqlData.cs" />
+    <Compile Include="Common\Storage\RepSqlFavorites.cs" />
+    <Compile Include="Common\Storage\RepSqlFavoritesStatements.cs" />
+    <Compile Include="Common\Storage\RepSqlFavoritesTables.cs" />
+    <Compile Include="Common\Storage\RepSqlFavoritesViews.cs" />
+    <Compile Include="Common\Storage\RepCommonWindows.cs" />
+    <Compile Include="Common\Util.cs" />
+    <Compile Include="Launch\LaunchCommon.cs" />
+    <Compile Include="Launch\LaunchGuiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Launch\LaunchGuiForm.Designer.cs">
+      <DependentUpon>LaunchGuiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Launch\LaunchItemBase.cs" />
+    <Compile Include="Launch\LaunchItemDatabase.cs" />
+    <Compile Include="Launch\LaunchItemExternal.cs" />
+    <Compile Include="Launch\LaunchItemInternal.cs" />
+    <Compile Include="Launch\QuickDatabases.cs" />
+    <Compile Include="Launch\QuickExternalItem.cs" />
+    <Compile Include="Launch\QuickExternals.cs" />
+    <Compile Include="Nin\NinGuiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nin\NinGuiForm.Designer.cs">
+      <DependentUpon>NinGuiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sql\AppStartDatabaseVersion.cs" />
+    <Compile Include="Sql\AppStartInformation.cs" />
+    <Compile Include="Sql\AsqlBuilder.cs" />
+    <Compile Include="Sql\ConnectionManager.cs" />
+    <Compile Include="Sql\DatabaseContentManager.cs" />
+    <Compile Include="Sql\Database\AsqlColumnInfo.cs" />
+    <Compile Include="Sql\Database\ColumnInfo.cs" />
+    <Compile Include="Sql\Database\ConnectionHistory.cs" />
+    <Compile Include="Sql\Database\DatabaseConnectionBase.cs" />
+    <Compile Include="Sql\Database\DatabaseEngine.cs" />
+    <Compile Include="Sql\Database\IDatabaseConnection.cs" />
+    <Compile Include="Sql\Database\NativeColumnInfo.cs" />
+    <Compile Include="Sql\Database\OracleDatabaseConnection.cs" />
+    <Compile Include="Sql\Database\SqlParser.cs" />
+    <Compile Include="Sql\Database\SqlServerDatabaseConnection.cs" />
+    <Compile Include="Sql\Database\SummaryBuilder.cs" />
+    <Compile Include="Sql\ExecutionManager.cs" />
+    <Compile Include="Sql\FavoritesManager.cs" />
+    <Compile Include="Sql\FileManager.cs" />
+    <Compile Include="Sql\Gui\AppStartConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql\Gui\AppStartConnectForm.Designer.cs">
+      <DependentUpon>AppStartConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\AppStartEnvironment.cs" />
+    <Compile Include="Sql\Gui\FirstTimeConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql\Gui\FirstTimeConnectForm.Designer.cs">
+      <DependentUpon>FirstTimeConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\Gui\NodeBase.cs" />
+    <Compile Include="Sql\Gui\NodeDatabaseTable.cs" />
+    <Compile Include="Sql\Gui\NodeDatabaseView.cs" />
+    <Compile Include="Sql\Gui\NodeFavoriteTable.cs" />
+    <Compile Include="Sql\Gui\NodeFavoriteView.cs" />
+    <Compile Include="Sql\Gui\NodeFolder.cs" />
+    <Compile Include="Sql\Gui\NodeRoot.cs" />
+    <Compile Include="Sql\Gui\NodeTableBase.cs" />
+    <Compile Include="Sql\Gui\NodeTableViewBase.cs" />
+    <Compile Include="Sql\Gui\NodeViewBase.cs" />
+    <Compile Include="Sql\Gui\ReconnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql\Gui\ReconnectForm.Designer.cs">
+      <DependentUpon>ReconnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\Gui\ScriptRunner.cs" />
+    <Compile Include="Sql\Gui\SqlGuiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql\Gui\SqlGuiForm.Designer.cs">
+      <DependentUpon>SqlGuiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\Gui\SqlShortcutsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sql\Gui\SqlShortcutsForm.Designer.cs">
+      <DependentUpon>SqlShortcutsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\Gui\StatusBarController.cs" />
+    <Compile Include="Sql\SqlCommon.cs" />
+    <Compile Include="Sql\SqlUserSettings.cs" />
+    <Compile Include="Sql\StatementManager.cs" />
+    <None Include="Resources\Unknown048.png" />
+    <None Include="Resources\BatCmd048.png" />
+    <None Include="Resources\BFlagA.ico" />
+    <None Include="Resources\BFlagS.ico" />
+    <None Include="Resources\BFlagA016.png" />
+    <None Include="Resources\BFlagA024.png" />
+    <None Include="Resources\BFlagA048.png" />
+    <None Include="Resources\BFlagS016.png" />
+    <None Include="Resources\BFlagS024.png" />
+    <None Include="Resources\BFlagS048.png" />
+    <Content Include="Unit4.ico" />
+    <EmbeddedResource Include="BFlagCalc\BflagAdvancedGuiForm.resx">
+      <DependentUpon>BflagAdvancedGuiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BFlagCalc\BflagSimpleGuiForm.resx">
+      <DependentUpon>BflagSimpleGuiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Gui\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Gui\DeveloperForm.resx">
+      <DependentUpon>DeveloperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Gui\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Launch\LaunchGuiForm.resx">
+      <DependentUpon>LaunchGuiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nin\NinGuiForm.resx">
+      <DependentUpon>NinGuiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sql\Gui\AppStartConnectForm.resx">
+      <DependentUpon>AppStartConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql\Gui\FirstTimeConnectForm.resx">
+      <DependentUpon>FirstTimeConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql\Gui\ReconnectForm.resx">
+      <DependentUpon>ReconnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql\Gui\SqlGuiForm.resx">
+      <DependentUpon>SqlGuiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql\Gui\SqlShortcutsForm.resx">
+      <DependentUpon>SqlShortcutsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="UBW Tools - Brukermanual.docx" />
+    <Content Include="UBW Tools - Brukermanual.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UbwTools_TemporaryKey.pfx" />
+    <None Include="Resources\Execute024.png" />
+    <None Include="Resources\Execute016.png" />
+    <None Include="Resources\DatabaseEdit024.png" />
+    <None Include="Resources\DatabaseEdit016.png" />
+    <None Include="Resources\DatabaseDisconnect024.png" />
+    <None Include="Resources\DatabaseDisconnect016.png" />
+    <None Include="Resources\Database024.png" />
+    <None Include="Resources\Database016.png" />
+    <None Include="Resources\AppStart024.png" />
+    <None Include="Resources\AppStart016.png" />
+    <None Include="Resources\Adjust016.png" />
+    <None Include="Resources\Database.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Adjust024.png" />
+    <None Include="Resources\Unit4.ico" />
+    <None Include="Resources\Unit4256.png" />
+    <None Include="Resources\Unit4Logo.jpg" />
+    <None Include="Resources\Error016.png" />
+    <None Include="Resources\Favorites016.png" />
+    <None Include="Resources\FolderClosed016.png" />
+    <None Include="Resources\FolderOpen016.png" />
+    <None Include="Resources\Grid016.png" />
+    <None Include="Resources\Script016.png" />
+    <None Include="Resources\View016.png" />
+    <None Include="Resources\NoUnit4016.png" />
+    <None Include="Resources\Unit4016.png" />
+    <None Include="Resources\Server016.png" />
+    <None Include="Resources\Oracle016.png" />
+    <None Include="Resources\SqlServer016.png" />
+    <None Include="Resources\Copy016.png" />
+    <None Include="Resources\Copy024.png" />
+    <None Include="Resources\Cut016.png" />
+    <None Include="Resources\Cut024.png" />
+    <None Include="Resources\Paste016.png" />
+    <None Include="Resources\Paste024.png" />
+    <None Include="Resources\Delete016.png" />
+    <None Include="Resources\Delete024.png" />
+    <None Include="Resources\OpenFile016.png" />
+    <None Include="Resources\OpenFile024.png" />
+    <None Include="Resources\SaveFile016.png" />
+    <None Include="Resources\SaveFile024.png" />
+    <None Include="Resources\Undo016.png" />
+    <None Include="Resources\Undo024.png" />
+    <None Include="Resources\Developer1.jpg" />
+    <None Include="Resources\Developer2.png" />
+    <None Include="Resources\FavoritesAdd016.png" />
+    <None Include="Resources\FavoritesRemove016.png" />
+    <None Include="Resources\Redo016.png" />
+    <None Include="Resources\Redo024.png" />
+    <None Include="Resources\SelectAll016.png" />
+    <None Include="Resources\SelectAll024.png" />
+    <None Include="Resources\SQL016.png" />
+    <None Include="Resources\Count016.png" />
+    <None Include="Resources\NorIdNum048.png" />
+    <None Include="Resources\NorIdNum.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Database048.png" />
+    <None Include="Resources\DatabaseConnect016.png" />
+    <None Include="Resources\DatabaseConnect024.png" />
+    <None Include="Resources\NorIdNum016.png" />
+    <None Include="Resources\NorIdNum024.png" />
+    <None Include="Resources\DatabaseOther016.png" />
+    <None Include="Resources\DatabaseOther024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UbwToolsRes\UbwToolsRes.csproj">
+      <Project>{a8375bb1-cb3c-406b-a640-cf6951477d9d}</Project>
+      <Name>UbwToolsRes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
